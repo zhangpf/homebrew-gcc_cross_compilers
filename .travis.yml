@@ -1,9 +1,8 @@
 os: osx
 language: objective-c
 before_install:
-  - brew update
-  - brew upgrade
   - brew tap sevki/gcc_cross_compilers
+  - brew tap homebrew/dupes
 script: 
   - brew install x64-elf-gcc
   - brew install i386-elf-gcc
