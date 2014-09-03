@@ -8,15 +8,15 @@ env:
   - ARCH=arm
   - ARCH=i386
 script:
-  - brew audit `$PACKAGE`-elf-binutils
-  - brew audit `$PACKAGE`-elf-gcc
-  - brew audit `$PACKAGE`-elf-gdb
-  - brew install -v `$PACKAGE`-elf-binutils
-  - brew install -v `$PACKAGE`-elf-gcc
-  - brew install -v `$PACKAGE`-elf-gdb
-  - brew test `$PACKAGE`-elf-binutils
-  - brew test `$PACKAGE`-elf-gcc
-  - brew test `$PACKAGE`-elf-gdb
+  - brew audit `$ARCH`-elf-binutils
+  - brew audit `$ARCH`-elf-gcc
+  - brew audit `$ARCH`-elf-gdb
+  - brew install -v `$ARCH`-elf-binutils
+  - brew install -v `$ARCH`-elf-gcc
+  - brew install -v `$ARCH`-elf-gdb
+  - brew test `$ARCH`-elf-binutils
+  - brew test `$ARCH`-elf-gcc
+  - brew test `$ARCH`-elf-gdb
 branches:
   only:
     - master
