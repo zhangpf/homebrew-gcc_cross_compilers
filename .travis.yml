@@ -7,18 +7,16 @@ env:
   - ARCH=x64
   - ARCH=arm
   - ARCH=i386
-  - ARCH=i386-jos
-  - ARCH=i586
 script:
-  - brew audit $PACKAGE-elf-binutils
-  - brew audit $PACKAGE-elf-gcc
-  - brew audit $PACKAGE-elf-gdb
-  - brew install -v $PACKAGE-elf-binutils
-  - brew install -v $PACKAGE-elf-gcc
-  - brew install -v $PACKAGE-elf-gdb
-  - brew test $PACKAGE-elf-binutils
-  - brew test $PACKAGE-elf-gcc
-  - brew test $PACKAGE-elf-gdb
+  - brew audit `$PACKAGE`-elf-binutils
+  - brew audit `$PACKAGE`-elf-gcc
+  - brew audit `$PACKAGE`-elf-gdb
+  - brew install -v `$PACKAGE`-elf-binutils
+  - brew install -v `$PACKAGE`-elf-gcc
+  - brew install -v `$PACKAGE`-elf-gdb
+  - brew test `$PACKAGE`-elf-binutils
+  - brew test `$PACKAGE`-elf-gcc
+  - brew test `$PACKAGE`-elf-gdb
 branches:
   only:
     - master
