@@ -1,6 +1,6 @@
 os:
   - osx
-language: c
+language: objective-c
 before_install:
   - brew update
   - if brew outdated | grep -qx <package-name>; then brew upgrade <package-name>; fi
