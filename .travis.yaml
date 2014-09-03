@@ -1,0 +1,14 @@
+language: c
+before_install:
+  - brew update
+  - if brew outdated | grep -qx <package-name>; then brew upgrade <package-name>; fi
+script: brew install https://raw.githubusercontent.com/sevki/homebrew-gcc_cross_compilers/master/x64-elf-gcc.rb
+branches:
+  only:
+    - master
+notifications:
+  recipients:
+    - s@sevki.org
+  email:
+    on_success: change
+    on_failure: always
