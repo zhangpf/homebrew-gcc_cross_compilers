@@ -1,10 +1,13 @@
-os:
-  - osx
+os: osx
 language: objective-c
 before_install:
   - brew update
-  - if brew outdated | grep -qx <package-name>; then brew upgrade <package-name>; fi
-script: brew install https://raw.githubusercontent.com/sevki/homebrew-gcc_cross_compilers/master/x64-elf-gcc.rb
+  - brew upgrage
+  - brew tap sevki/gcc_cross_compilers
+script: 
+  - brew install x64-elf-gcc
+  - brew install i386-elf-gcc
+  - brew install arm-elf-gcc
 branches:
   only:
     - master
