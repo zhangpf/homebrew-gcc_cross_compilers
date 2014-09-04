@@ -4,19 +4,23 @@ before_install:
   - brew tap sevki/gcc_cross_compilers
   - brew tap homebrew/dupes
 env:
-  - ARCH=x64
-  - ARCH=arm
-  - ARCH=i386
+  - COM=elf-gcc
+  - BU=elf-binutils
+  - DBG=elf-dgb
+  matrix:
+    - ARCH=x64  GCC=$ARCH-$COM BIN=$ARCH-$BU GDB=$ARCH-$DBG
+    - ARCH=arm  GCC=$ARCH-$COM BIN=$ARCH-$BU GDB=$ARCH-$DBG
+    - ARCH=i386 GCC=$ARCH-$COM BIN=$ARCH-$BU GDB=$ARCH-$DBG
 script:
-  - brew audit `$ARCH`-elf-binutils
-  - brew audit `$ARCH`-elf-gcc
-  - brew audit `$ARCH`-elf-gdb
-  - brew install -v `$ARCH`-elf-binutils
-  - brew install -v `$ARCH`-elf-gcc
-  - brew install -v `$ARCH`-elf-gdb
-  - brew test `$ARCH`-elf-binutils
-  - brew test `$ARCH`-elf-gcc
-  - brew test `$ARCH`-elf-gdb
+  - brew audit $BIN
+  - brew audit $GCC
+  - brew audit $GDB
+  - brew install -v $BIN
+  - brew install -v $GCC
+  - brew install -v $GDB
+  - brew test $BIN
+  - brew test $GCC
+  - brew test $GDB
 branches:
   only:
     - master
