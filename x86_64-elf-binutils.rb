@@ -1,6 +1,6 @@
 require 'formula'
 
-class ArmElfBinutils < Formula
+class X8664ElfBinutils < Formula
   homepage 'http://gcc.gnu.org'
   url 'http://ftp.gnu.org/gnu/binutils/binutils-2.25.tar.gz'
   sha1 'f10c64e92d9c72ee428df3feaf349c4ecb2493bd'
@@ -18,6 +18,8 @@ class ArmElfBinutils < Formula
                              "--prefix=#{prefix}"
       system 'make all'
       system 'make install'
+
     end
   end
+
 end

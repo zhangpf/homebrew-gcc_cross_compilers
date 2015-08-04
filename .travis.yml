@@ -4,7 +4,7 @@ before_install:
   - brew tap sevki/gcc_cross_compilers
   - brew tap homebrew/dupes
 env:
-  - ARCH=x64
+  - ARCH=x86_64
   - ARCH=arm
   - ARCH=i386
 script:
