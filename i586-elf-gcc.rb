@@ -27,7 +27,10 @@ class I586ElfGcc < Formula
                              '--disable-werror',
                              "--prefix=#{prefix}",
                              "--enable-languages=c",
-                             "--without-headers"
+                             "--without-headers",
+                             "--with-gmp=#{Formula["gmp"].opt_prefix}",
+                             "--with-mpfr=#{Formula["mpfr"].opt_prefix}",
+                             "--with-mpc=#{Formula["libmpc"].opt_prefix}"
       system 'make all-gcc'
       system 'make install-gcc'
       FileUtils.ln_sf binutils.prefix/"i586-elf", prefix/"i586-elf"
