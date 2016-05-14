@@ -26,7 +26,7 @@ class I586ElfGcc < Formula
       system '../configure', '--disable-nls', '--target=i586-elf',
                              '--disable-werror',
                              "--prefix=#{prefix}",
-                             "--enable-languages=c",
+                             "--enable-languages=c,c++",
                              "--without-headers",
                              "--with-gmp=#{Formula["gmp"].opt_prefix}",
                              "--with-mpfr=#{Formula["mpfr"].opt_prefix}",
