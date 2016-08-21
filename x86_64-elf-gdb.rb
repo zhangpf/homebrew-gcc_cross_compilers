@@ -2,8 +2,8 @@ require 'formula'
 
 class X8664ElfGdb < Formula
   homepage 'http://gcc.gnu.org'
-  url 'http://ftp.gnu.org/gnu/gdb/gdb-7.9.tar.xz'
-  sha1 '1dabff2168bd8fe3cadf9386e47a47c527ea99ba'
+  url 'http://ftp.gnu.org/gnu/gdb/gdb-7.11.1.tar.xz'
+  sha256 'e9216da4e3755e9f414c1aa0026b626251dfc57ffe572a266e98da4f6988fc70'
 
   depends_on 'x86_64-elf-binutils'
   depends_on 'x86_64-elf-gcc'
