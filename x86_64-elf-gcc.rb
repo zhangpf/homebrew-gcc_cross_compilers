@@ -2,9 +2,9 @@ require 'formula'
 
 class X8664ElfGcc < Formula
   homepage 'http://gcc.gnu.org'
-  url "http://ftpmirror.gnu.org/gcc/gcc-6.1.0/gcc-6.1.0.tar.bz2"
-  mirror "https://ftp.gnu.org/gnu/gcc/gcc-6.1.0/gcc-6.1.0.tar.bz2"
-  sha256 "09c4c85cabebb971b1de732a0219609f93fc0af5f86f6e437fd8d7f832f1a351"
+  url "http://mirror.tochlab.net/pub/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2"
+  mirror "https://ftp.gnu.org/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2"
+  sha256 "9944589fc722d3e66308c0ce5257788ebd7872982a718aa2516123940671b7c5"
 
   depends_on "gmp"
   depends_on "libmpc"
