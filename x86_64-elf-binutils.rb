@@ -5,7 +5,7 @@ class X8664ElfBinutils < Formula
   url 'http://ftp.gnu.org/gnu/binutils/binutils-2.27.tar.gz'
   sha256 '26253bf0f360ceeba1d9ab6965c57c6a48a01a8343382130d1ed47c468a3094f'
 
-  depends_on 'gcc' => :build
+  depends_on 'gcc@7' => :build
   def install
     ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-7'
     ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-7'
